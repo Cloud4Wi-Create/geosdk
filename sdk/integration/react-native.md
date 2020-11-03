@@ -127,7 +127,7 @@ import Geouniq from 'react-native-geouniq';
 ### Enabling/Disabling the SDK
 
 The SDK can be enabled and disabled at runtime.
-To make GeoUniq SDK start, you need to enable it by calling the method `Geouniq.enable` at least once.
+To make Cloud4Wi Geo SDK start, you need to enable it by calling the method `Geouniq.enable` at least once.
 
 Once enabled, the SDK will not stop until you disable it by calling `Geouniq.disable`. That is, it will keep performing automatic operations, 
 such as tracking the device position, even after a device reboot or an update of the app.

@@ -132,11 +132,11 @@ var activeTableTab = "activeTableTab";
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/geouniq/android/GeoUniq.ILocationListener.html#onFinalLocationListened-android.location.Location-">onFinalLocationListened</a></span>(android.location.Location&nbsp;location)</code>
 <div class="block">Callback method called when no other <code>Location</code> object will be returned.<br>
 
- This method is called when GeoUniq SDK has managed to detect the location with
+ This method is called when Cloud4Wi Geo SDK has managed to detect the location with
  the desired accuracy or in any case after a while.<br>
 
  After this method is called, the method <a href="../../../com/geouniq/android/GeoUniq.ILocationListener.html#onLocationListened-android.location.Location-"><code>onLocationListened(Location)</code></a>
- will not be called anymore and GeoUniq SDK will stop detecting the location.<br>
+ will not be called anymore and Cloud4Wi Geo SDK will stop detecting the location.<br>
 
  The <code>Location</code> object that is returned contains the location with the best accuracy
  among the various locations that have been detected.<br>
@@ -151,12 +151,12 @@ var activeTableTab = "activeTableTab";
 <div class="block">Callback method called each time a new <code>Location</code> is detected until
  <a href="../../../com/geouniq/android/GeoUniq.ILocationListener.html#onFinalLocationListened-android.location.Location-"><code>onFinalLocationListened(Location)</code></a> is called.<br>
 
- This method is called when a new location is available and GeoUniq SDK is
+ This method is called when a new location is available and Cloud4Wi Geo SDK is
  still working to detect a more accurate location.<br>
 
  When the location is requested by calling
  <a href="../../../com/geouniq/android/GeoUniq.html#getLocation-float-com.geouniq.android.GeoUniq.ILocationListener-com.geouniq.android.GeoUniq.IErrorListener-"><code>GeoUniq.getLocation(float, ILocationListener, IErrorListener)</code></a>,
- GeoUniq SDK may call this method several times.</div>
+ Cloud4Wi Geo SDK may call this method several times.</div>
 </td>
 </tr>
 </table>
@@ -184,16 +184,16 @@ var activeTableTab = "activeTableTab";
 <div class="block">Callback method called each time a new <code>Location</code> is detected until
  <a href="../../../com/geouniq/android/GeoUniq.ILocationListener.html#onFinalLocationListened-android.location.Location-"><code>onFinalLocationListened(Location)</code></a> is called.<br>
 
- This method is called when a new location is available and GeoUniq SDK is
+ This method is called when a new location is available and Cloud4Wi Geo SDK is
  still working to detect a more accurate location.<br>
 
  When the location is requested by calling
  <a href="../../../com/geouniq/android/GeoUniq.html#getLocation-float-com.geouniq.android.GeoUniq.ILocationListener-com.geouniq.android.GeoUniq.IErrorListener-"><code>GeoUniq.getLocation(float, ILocationListener, IErrorListener)</code></a>,
- GeoUniq SDK may call this method several times.
+ Cloud4Wi Geo SDK may call this method several times.
  However, if this callback is invoked at least once,
  then the callback <a href="../../../com/geouniq/android/GeoUniq.ILocationListener.html#onFinalLocationListened-android.location.Location-"><code>onFinalLocationListened(Location)</code></a>
  will be invoked as last callback,
- indicating that GeoUniq SDK has stopped working to fulfill the location request.<br>
+ indicating that Cloud4Wi Geo SDK has stopped working to fulfill the location request.<br>
 
  The first time this method is called, the argument <code>location</code> generally contains
  a cached <code>Location</code> that had been detected in a previous time.</div>
@@ -212,11 +212,11 @@ var activeTableTab = "activeTableTab";
 <pre>void&nbsp;onFinalLocationListened(android.location.Location&nbsp;location)</pre>
 <div class="block">Callback method called when no other <code>Location</code> object will be returned.<br>
 
- This method is called when GeoUniq SDK has managed to detect the location with
+ This method is called when Cloud4Wi Geo SDK has managed to detect the location with
  the desired accuracy or in any case after a while.<br>
 
  After this method is called, the method <a href="../../../com/geouniq/android/GeoUniq.ILocationListener.html#onLocationListened-android.location.Location-"><code>onLocationListened(Location)</code></a>
- will not be called anymore and GeoUniq SDK will stop detecting the location.<br>
+ will not be called anymore and Cloud4Wi Geo SDK will stop detecting the location.<br>
 
  The <code>Location</code> object that is returned contains the location with the best accuracy
  among the various locations that have been detected.<br>

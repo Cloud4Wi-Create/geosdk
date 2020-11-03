@@ -17,8 +17,8 @@ into your project.
 ## Project Configuration
 
 ### Installation
-Obtain the mobile key for the platforms (Android and iOS) from GeoUniq
-Console (https://console.geouniq.com)
+Obtain the mobile key for the platforms (Android and iOS) from Cloud4Wi
+Console.
 
 Be sure to have initialized the platform you want to develop for
 before to install the plugin with the command `cordova platform add
@@ -55,7 +55,7 @@ Once you install the plugin, follow the instruction `Installation` and `Project 
 ### Enabling/Disabling the SDK
 
 The SDK can be enabled and disabled at runtime.
-To make GeoUniq SDK start, you need to enable it by calling the method `GUCordovaPlugin.enable` at least once.
+To make Cloud4Wi Geo SDK start, you need to enable it by calling the method `GUCordovaPlugin.enable` at least once.
 
 You might do that into the main activity of your app, as in the example below.
 
@@ -64,9 +64,9 @@ such as tracking the device position, even after a device reboot or an update of
 Disabling the SDK at runtime is useful if you want the SDK to stop completely. For example, you could remotely control a configuration parameter of your 
 app to stop the SDK for all or some of your installations.
 
-> If you simply don't want Geouniq to keep collecting location data for a specific User, you can do that without completely disabling the 
+> If you simply don't want Cloud4Wi to keep collecting location data for a specific User, you can do that without completely disabling the 
 SDK (see [Handle User consent](#handle-user-consent)). This way you can still exploit the mobile-side functionalities that the SDK provides without having 
-Geouniq collecting data for the specific user
+Cloud4Wi collecting data for the specific user
 
 
 ```javascript
@@ -90,7 +90,7 @@ app.initialize();
 
 ### Handling blocking issues
 
-For the SDK to be able to accomplish its main task, that is tracking the device position, the following requirements must be met:
+For the Cloud4Wi Geo SDK to be able to accomplish its main task, that is tracking the device position, the following requirements must be met:
 
 * The location permission must be granted to the app
 * The location functionality must be enabled on the device
@@ -117,18 +117,18 @@ app.initialize();
 
 ### Handling User consent
 
-The ability of the SDK to track the device location does not give Geouniq the permission to collect user data.
+The ability of the SDK to track the device location does not give Cloud4Wi the permission to collect user data.
 According to [GDPR](https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en) 
-regulation, you should request the User the consent to collect location data on Geouniq platform.
+regulation, you should request the User the consent to collect location data on Cloud4Wi platform.
 
 > NOTE: if your app is not under GDPR regulation, you can avoid request the consent to the user and directly inform the SDK that it has the permission 
-to collect data on Geouniq platform. This can be done as explained below in [Setting consent explicitely](#setting-the-user-consent-explicitely)
+to collect data on Cloud4Wi platform. This can be done as explained below in [Setting consent explicitely](#setting-the-user-consent-explicitely)
 
 The SDK provides a simple way to handle user consent through the `GUCordovaPlugin.showConsentDialogAndSet`as shown in the example below.
 When this method is called, the SDK first checks if it has already obtained the consent. If yes, it does nothing. Otherwise, it will show a dialog to 
-the user requesting the consent to collect data on GeoUniq platform. The privacy policy can also be seen by the User.
-If the User gives the consent, then the SDK will actually start sending data on GeoUniq platform. Otherwise, it will keep performing all the other automatic
-operations without sending any information on GeoUniq platform.
+the user requesting the consent to collect data on Cloud4Wi platform. The privacy policy can also be seen by the User.
+If the User gives the consent, then the SDK will actually start sending data on Cloud4Wi platform. Otherwise, it will keep performing all the other automatic
+operations without sending any information on Cloud4Wi platform.
 
 ```javascript
 
@@ -153,7 +153,7 @@ app.initialize();
 #### Setting the user consent explicitely
 
 The SDK also provides a method to explicitely set whether the User has given or not the consent.
-You can call the `GUCordovaPlugin.setConsentStatus` method to explicitely inform the SDK that it Geouniq is allowed to collect user data.
+You can call the `GUCordovaPlugin.setConsentStatus` method to explicitely inform the SDK that it Cloud4Wi is allowed to collect user data.
 This is particularly useful in the following cases.
 
 If your app is not under GDPR regulation, then you can call this method with the first method parameter equal to `true` to let the SDK collect data 
@@ -161,7 +161,7 @@ without requesting any consent to the User
 
 If your app is under GDPR regulation, then you should provide the User a way to remove the consent from your app's settings.
 If the User removes the consent, then you should inform the SDK by calling the method above with the first method parameter equal to `false`.
-By doing so, the SDK will stop sending data to GeoUniq platform immediately.
+By doing so, the SDK will stop sending data to Cloud4Wi platform immediately.
 
 ```javascript
 

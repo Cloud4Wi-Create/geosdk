@@ -1,6 +1,6 @@
 # Save geographical areas that can be recalled in requests
 
-GeoUniq Analytics allows to create [*Saved Area*](/api/resources/user-created/saved-area.md) Resources that represents simple geographical areas.
+Cloud4Wi allows to create [*Saved Area*](/api/resources/user-created/saved-area.md) Resources that represents simple geographical areas.
 A *Saved Area* can be recalled when performing requests to the Web API to indicate a specific area.
 Indeed, when a request has to be referred to a specific area, for example to analyze *Visits* to a specific location, or to set *Triggers* like [geofences](/use-cases/geofence.md), one may indicate the area of interest by referring to a *Saved Area* instead of explicitely provide it in the request.
 This is particularly useful for *Triggers*.

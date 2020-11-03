@@ -50,7 +50,7 @@ If your app sets targetSdkVersion to "29" or higher, you should declare in your 
         android:foregroundServiceType="location" />
 ```
 
-If you do not declare this service, GeoUniq SDK will NOT start.
+If you do not declare this service, Cloud4Wi Geo SDK will NOT start.
 
 Also, if your app meets the play store policies for background location, make sure you've declared permission to access background location:
 ```xml
@@ -104,14 +104,14 @@ buildTypes {
 ### Enabling/Disabling the SDK
 
 The SDK can be enabled and disabled at runtime.
-To make GeoUniq SDK start, you need to enable it by calling the method `GeoUniq.enable()` at least once.
+To make Cloud4Wi Geo SDK start, you need to enable it by calling the method `GeoUniq.enable()` at least once.
 
 You might do that into the main activity of your app, as in the example below.
 
 Once enabled, the SDK will not stop until you disable it by calling `GeoUniq.disable()`. That is, it will keep performing automatic operations, such as tracking the device position, even after a device reboot or an update of the app.
 Disabling the SDK at runtime is useful if you want the SDK to stop completely. For example, you could remotely control a configuration parameter of your app to stop the SDK for all or some of your installations.
 
-> If you simply don't want Geouniq to keep collecting location data for a specific User, you can do that without completely disabling the SDK (see [Handle User consent](#handle-user-consent)). This way you can still exploit the mobile-side functionalities that the SDK provides without having Geouniq collecting data for the specific user
+> If you simply don't want Cloud4Wi to keep collecting location data for a specific User, you can do that without completely disabling the SDK (see [Handle User consent](#handle-user-consent)). This way you can still exploit the mobile-side functionalities that the SDK provides without having Cloud4Wi collecting data for the specific user
 
 
 ```java
@@ -157,7 +157,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        // This is to automatically handle location permission and other possible issues that would prevent GeoUniq to work correctly
+        // This is to automatically handle location permission and other possible issues that would prevent Cloud4Wi to work correctly
         this.setErrorListener();
     }
 
@@ -182,15 +182,15 @@ public class MainActivity extends Activity {
 
 ### Handling User consent
 
-The ability of the SDK to track the device location does not give Geouniq the permission to collect user data.
-According to [GDPR](https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en) regulation, you should request the User the consent to collect location data to Geouniq platform.
-There are different consents that User can be grant, if at least one consent is granted, Geouniq have the permission to collect user data.
+The ability of the SDK to track the device location does not give Cloud4Wi the permission to collect user data.
+According to [GDPR](https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en) regulation, you should request the User the consent to collect location data to Cloud4Wi platform.
+There are different consents that User can be grant, if at least one consent is granted, Cloud4Wi have the permission to collect user data.
 
-> NOTE: if your app is not under GDPR regulation, you can avoid request the consent to the user and directly inform the SDK that it has the permission to collect data on Geouniq platform. This can be done as explained below in [Setting consent explicitely](#setting-the-user-consent-explicitely)
+> NOTE: if your app is not under GDPR regulation, you can avoid request the consent to the user and directly inform the SDK that it has the permission to collect data on Cloud4Wi platform. This can be done as explained below in [Setting consent explicitely](#setting-the-user-consent-explicitely)
 
 The SDK provides a simple way to handle user consent through the `showPrivacyPolicyAndSet()` method of the `GeoUniq` class, as shown in the example below.
-When this method is called, it will show a dialog to the User requesting the consent to collect data on GeoUniq platform. The privacy policy can also be seen by the User.
-If the User accept the whole privacy policy or gives at least a consent, then the SDK will actually start sending data on GeoUniq platform. Otherwise, it will keep performing all the other automatic operations without sending any information on GeoUniq platform.
+When this method is called, it will show a dialog to the User requesting the consent to collect data on GeoCloud4WiUniq platform. The privacy policy can also be seen by the User.
+If the User accept the whole privacy policy or gives at least a consent, then the SDK will actually start sending data on Cloud4Wi platform. Otherwise, it will keep performing all the other automatic operations without sending any information on Cloud4Wi platform.
 
 The `GeoUniq.IPrivacyPolicyListener` object is used to inform the caller about the user choices, that are wrapped in the `GeoUniq.IConsentsMap` object.
 The type of the objects contained in the map is `GeoUniq.ConsentItem`, this is an enumerated that model a single consent.
@@ -264,26 +264,26 @@ public class MainActivity extends Activity {
 #### Setting the user consent explicitely
 
 The SDK also provides `setPrivacyConsent(ConsentItem consentItem, boolean isGranted)` method of the `GeoUniq` class to explicitely set a consent.
-If there is at least a consent granted, Geouniq is allowed to collect user data.
+If there is at least a consent granted, Cloud4Wi is allowed to collect user data.
 This is particularly useful in the following cases.
 
 If your app is not under GDPR regulation, then you can call this method with any one `ConsentItem` and the parameter `isGranted` equal to `true` to let the SDK collect data without requesting any consent to the User
 
-If your app is under GDPR regulation but youn want to use your own dialog to request the consent to the User, then you have to explicitely inform GeoUniq SDK about the user choise.
+If your app is under GDPR regulation but youn want to use your own dialog to request the consent to the User, then you have to explicitely inform Cloud4Wi Geo SDK about the user choise.
 This must be done in two different situations:
 
 1. When the User takes a choise on your consent dialog: the user's choise must be comunicated to the SDK
-2. Each time the app starts: you should check the current status of the consent and communicate it to GeoUniq SDK each time. Note that this is important if your app already used to request the consent to collect data to the User before to integrate GeoUniq SDK. In such a case, if the User had already given the consent and you no longer ask it to the User, GeoUniq SDK would never be informed that the User had consented data to be collected. 
+2. Each time the app starts: you should check the current status of the consent and communicate it to Cloud4Wi Geo SDK each time. Note that this is important if your app already used to request the consent to collect data to the User before to integrate Cloud4Wi Geo SDK. In such a case, if the User had already given the consent and you no longer ask it to the User, Cloud4Wi Geo SDK would never be informed that the User had consented data to be collected. 
 
 Finally, you should provide the User a way to remove a consent from your app's settings.
 If the User removes a consent, then you should inform the SDK by calling the method above with the releated `ConsentItem` element and parameter `isGranted` equal to `false`.
-By doing so, if there isn't at least another consent granted, the SDK will stop sending data to GeoUniq platform immediately.
+By doing so, if there isn't at least another consent granted, the SDK will stop sending data to Cloud4Wi platform immediately.
 
 There are 2 types of consents, modeled by the GeoUniq.ConsentItem enumeration:
 - GeoUniq.ConsentItem.ANALYSIS
 - GeoUniq.ConsentItem.CUSTOMIZATION_AND_ADTARGETING
 
-> This is an example that shown how to comunicate the current status of constents to GeoUniq SDK when app starts
+> This is an example that shown how to comunicate the current status of constents to Cloud4Wi Geo SDK when app starts
 
 ```java
 public class MainActivity extends Activity {
@@ -319,7 +319,7 @@ public class MainActivity extends Activity {
         showAnalysisConsentsRequestDialog(this, new IAnalysisConsentsListener() {
             @Override
             public void onUserResponse(boolean isGranted) {
-                // COMMUNICATE THE USER'S RESPONSE TO THE GEOUNIQ SDK
+                // COMMUNICATE THE USER'S RESPONSE TO THE Cloud4Wi Geo SDK
                 GeoUniq.getInstance(MainActivity.this).setPrivacyConsent(GeoUniq.ConsentItem.ANALYSIS, isGranted);
             }
         });
