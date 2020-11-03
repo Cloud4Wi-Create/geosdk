@@ -1,0 +1,1 @@
+The [`Activity`](/api/resources/platform-created/device-related/activity.md) resource is not available yet

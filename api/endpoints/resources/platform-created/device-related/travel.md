@@ -1,0 +1,1 @@
+The [`Travel`](/api/resources/platform-created/device-related/travel.md) resource is not available yet

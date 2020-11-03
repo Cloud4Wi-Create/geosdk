@@ -1,0 +1,1 @@
+The [`Living Area`](/api/resources/platform-created/device-related/living-area.md) resource is not available yet

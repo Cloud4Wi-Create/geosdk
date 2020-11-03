@@ -1,0 +1,1 @@
+The [`Flight`](/api/resources/platform-created/device-related/flight.md) resource is not available yet
