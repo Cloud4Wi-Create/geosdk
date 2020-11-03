@@ -1,7 +1,7 @@
 # Home and Work Location
 
 Home and Work Location respectively represent the geographical location where a User presumibly resides and works.
-This information is periodically recomputed for each device by GeoUniq Analytics platform.
+This information is periodically recomputed for each device by Cloud4Wi platform.
 However, no temporal information is kept for this kind of [Resource Classes](/overview.md#resources), meaning that no history of the identified Home/Work location is associated to *Devices*.
 Instead, for each *Device*, only the current Home/Work location(s) are provided.
 

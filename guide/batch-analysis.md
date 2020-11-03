@@ -365,7 +365,7 @@ How the Segment is encoded in the file depends on the specific Dimension and for
 
 ### Submit an analysis
 
-Inform Geouniq analytics platform that the analysis can be executed.
+Inform Cloud4Wi platform that the analysis can be executed.
 The API will return a 409 invalid operation if some input file is missing.
 The Staus of the analysis will change in `starting` and then in `running`.
 

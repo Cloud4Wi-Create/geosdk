@@ -4,11 +4,11 @@ A *Saved Area* is a simple Resource that identifies a geographical area.
 *Saved Areas* can be created in order to recall them when performing requests to the Web API.
 Specifically, one or more *Saved Areas* can be indicated for a [*Space* Segment](/api/dimensions/space.md) through a [`SavedArea-Segment`](/api/data-models/d-segment/space.md#saved-area-segment) Object.
 
-> *Saved Areas* have no effect on the operations performed by GeoUniq Analytics Platform. They only indicate a geographical area when recalled in a specific Request.
+> *Saved Areas* have no effect on the operations performed by Cloud4Wi platform. They only indicate a geographical area when recalled in a specific Request.
 
 A *Saved Area* Resource is mainly chracterized by:
 
-* **Resource ID and creation time**. Assigned by the GeoUniq Analytics Platform.
+* **Resource ID and creation time**. Assigned by the Cloud4Wi platform.
 * **Name, Description, and Labels.** Descriptive Information provided when the Resource is created.
 * **Geographical Area**. Indication of the geographical area.
 

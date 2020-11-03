@@ -8,7 +8,7 @@ The most important Resource Class is [***Device***](/api/resources/platform-crea
 
 The Resource Classes defined by this API are grouped into two main categories:
 
-* [**Platform-created Resources**](/api/resources/platform-created/index.md). Are automatically created by GeoUniq Analytics platform. Only the READ operation is allowed. A sub-category of Platform-created Resources are:
+* [**Platform-created Resources**](/api/resources/platform-created/index.md). Are automatically created by Cloud4Wi platform. Only the READ operation is allowed. A sub-category of Platform-created Resources are:
 	* [**Device-related Resources**](/api/resources/platform-created/device-related/index.md). Refer to a specific device. An example of a Device-related Resource Class is *Detected Position*, which represents the geographical location where a device was at a given specific time.
 * [**User-created Resources**](/api/resources/user-created/index.md). Are created by a User of this API. Generally all CRUD operations are allowed. An example of a User-created Resource Class is *Trigger*, which defines an event to be monitored.
 
