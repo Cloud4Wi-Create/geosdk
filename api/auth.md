@@ -3,7 +3,7 @@
 Authorization to access resources is grant according to the [OAuth 2.0](https://tools.ietf.org/html/rfc6749) client credentials authorization flow.
 
 ## Authentication credentials
-Authentication credentials are in the form of an API KEY. The API KEY is specific for each GeoUniq Analytics Project and is generated when the [Project](/service-architecture.md) is created (see [Project Configuration](project-configuration.md)).
+Authentication credentials are in the form of an API KEY. The API KEY is specific for each Cloud4Wi Geo Services Project and is generated when the [Project](/service-architecture.md) is created (see [Project Configuration](project-configuration.md)).
 
 
 ## Accessing Resources
@@ -12,7 +12,7 @@ All the [endpoints](/api/endpoints/index.md) provided by this API require that a
 > `Authorization : Bearer <access_token>`
 
 ## Obtaining an access token
-Access tokens are obtained through the HTTPS request detailed below, where `<api_key>` is the API KEY of the specific GeoUniq Analytics Project.
+Access tokens are obtained through the HTTPS request detailed below, where `<api_key>` is the API KEY of the specific Cloud4Wi Geo Services Project.
 
 ### HTTP Request
 

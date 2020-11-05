@@ -6,7 +6,7 @@ A *Campaign* is a Resource that identifies an advertising campaign for drive-to-
 
 A *Campaign* Resource is mainly chracterized by:
 
-* **Resource ID and creation time**. Assigned by the GeoUniq Analytics Platform.
+* **Resource ID and creation time**. Assigned by the Cloud4Wi Geo Services Platform.
 * **Name, Description, and Labels.** Descriptive Information provided when the Resource is created.
 * **Type**. Indication of the whether the campaign is a digital or an  (OOH) campaign.
 * **Period**. Indication of the time period of the campaign.

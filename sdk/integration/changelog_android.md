@@ -112,7 +112,7 @@
 * Minor bug fix
 
 ### Enhancements
-*  Now Android Studio show the GeoUniq SDK documentation automatically
+*  Now Android Studio show the Geo SDK documentation automatically
 *  Added limit to stored log files
 
 <br>

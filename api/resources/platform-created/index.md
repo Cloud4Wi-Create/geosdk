@@ -1,7 +1,7 @@
 # Platform-created Resources
 
 This section lists the various Platform-created Resource Classes defined by this API.
-A Platform-created Resource Class models some information that is automatically created by GeoUniq Analytics platform.
+A Platform-created Resource Class models some information that is automatically created by Cloud4Wi Geo Platform.
 
 Each sub-section provides a general description of the *Resource Class*, explaining what it represents from a logical point of view.
 In addition, for each Resource *R*, the following is indicated:

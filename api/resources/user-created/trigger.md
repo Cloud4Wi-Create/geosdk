@@ -10,7 +10,7 @@ In detail, a *Trigger* allows to:
 
 A *Trigger* Resource is mainly chracterized by:
 
-* **Resource ID and creation time**. Assigned by the GeoUniq Analytics Platform.
+* **Resource ID and creation time**. Assigned by the Cloud4Wi Geo Services Platform.
 * **Name, Description, and Labels.** Descriptive Information provided when the Resource is created.
 * **Active Period.** Indication of the time period during which the event defined by the *Trigger* has to be monitored.
 * **Targets.** One or more Targets for which the event defined by the *Trigger* has to be monitored.

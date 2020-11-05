@@ -1,5 +1,5 @@
 # SDK Integration
-Follow this guide to install and include the GeoUniq plugin for Cordova
+Follow this guide to install and include the Geo SDK plugin for Cordova
 into your project.
 
 ## Table of Contents
@@ -55,7 +55,7 @@ Once you install the plugin, follow the instruction `Installation` and `Project 
 ### Enabling/Disabling the SDK
 
 The SDK can be enabled and disabled at runtime.
-To make GeoUniq SDK start, you need to enable it by calling the method `GUCordovaPlugin.enable` at least once.
+To make Geo SDK start, you need to enable it by calling the method `GUCordovaPlugin.enable` at least once.
 
 You might do that into the main activity of your app, as in the example below.
 

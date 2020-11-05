@@ -9,7 +9,7 @@ In detail, a *Hook*:
 
 A *Hook* Resource is mainly chracterized by:
 
-* **Resource ID and creation time**. Assigned by the GeoUniq Analytics Platform.
+* **Resource ID and creation time**. Assigned by the Cloud4Wi Geo Services Platform.
 * **Name, Description, and Labels.** Descriptive Information provided when the Resource is created.
 * **Type**. Indicates the type of *Hook*.
 * **Type Specific Information.** Information specific of each type of *Hook*.
@@ -48,7 +48,7 @@ trigger.name   | `String` | Value of the `"name"` field of the related `Trigger`
 trigger.description   | `String` | Value of the `"description"` field of the related `Trigger` Object.
 trigger.labels   | `[String]` | Value of the `"labels"` field of the related `Trigger` Object.
 involvedTarget |[`DeviceBase-Segment`](/api/data-models/d-segment/device-base.md)| Indicates the specific Target for which the event occurred. This is indicated through a *Device Base* Segment Object constructed according to the [*Device Base* Segmentation](/api/dimensions/device-base.md#segmentation-criteria) indicated in the `"targets.segmentBy"` field of the related `Trigger` Object.
-triggeredAt | [`Date`](/api/data-models/common/date.md) | The date and time when the event was identified by GeoUniq Analytics Platform.
+triggeredAt | [`Date`](/api/data-models/common/date.md) | The date and time when the event was identified by Cloud4Wi Geo Services Platform.
 occuredAt | [`Date`](/api/data-models/common/date.md) | The date and time when the event actually occured.
 
 

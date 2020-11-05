@@ -10,7 +10,7 @@ The analysis is started asincrounsly and the results will be provided trhough fi
 
 A *Footfall Analysis* Resource is mainly chracterized by:
 
-* **Resource ID and creation time**. Assigned by the GeoUniq Analytics Platform.
+* **Resource ID and creation time**. Assigned by the Cloud4Wi Geo Services Platform.
 * **Name, Description, and Labels.** Descriptive Information provided when the Resource is created.
 * **Type**. Indication of whether a Standard or Premium Footfall Analysis is desired.
 * **Control Group**. Indication of a set of devices' AIDs used as control group to compare the visits of exposed Users with the visits of such control group.

@@ -50,7 +50,7 @@ If your app sets targetSdkVersion to "29" or higher, you should declare in your 
         android:foregroundServiceType="location" />
 ```
 
-If you do not declare this service, GeoUniq SDK will NOT start.
+If you do not declare this service, Geo SDK will NOT start.
 
 Also, if your app meets the play store policies for background location, make sure you've declared permission to access background location:
 ```xml
@@ -104,7 +104,7 @@ buildTypes {
 ### Enabling/Disabling the SDK
 
 The SDK can be enabled and disabled at runtime.
-To make GeoUniq SDK start, you need to enable it by calling the method `GeoUniq.enable()` at least once.
+To make Geo SDK start, you need to enable it by calling the method `GeoUniq.enable()` at least once.
 
 You might do that into the main activity of your app, as in the example below.
 
@@ -269,11 +269,11 @@ This is particularly useful in the following cases.
 
 If your app is not under GDPR regulation, then you can call this method with any one `ConsentItem` and the parameter `isGranted` equal to `true` to let the SDK collect data without requesting any consent to the User
 
-If your app is under GDPR regulation but youn want to use your own dialog to request the consent to the User, then you have to explicitely inform GeoUniq SDK about the user choise.
+If your app is under GDPR regulation but youn want to use your own dialog to request the consent to the User, then you have to explicitely inform Geo SDK about the user choise.
 This must be done in two different situations:
 
 1. When the User takes a choise on your consent dialog: the user's choise must be comunicated to the SDK
-2. Each time the app starts: you should check the current status of the consent and communicate it to GeoUniq SDK each time. Note that this is important if your app already used to request the consent to collect data to the User before to integrate GeoUniq SDK. In such a case, if the User had already given the consent and you no longer ask it to the User, GeoUniq SDK would never be informed that the User had consented data to be collected. 
+2. Each time the app starts: you should check the current status of the consent and communicate it to Geo SDK each time. Note that this is important if your app already used to request the consent to collect data to the User before to integrate Geo SDK. In such a case, if the User had already given the consent and you no longer ask it to the User, Geo SDK would never be informed that the User had consented data to be collected. 
 
 Finally, you should provide the User a way to remove a consent from your app's settings.
 If the User removes a consent, then you should inform the SDK by calling the method above with the releated `ConsentItem` element and parameter `isGranted` equal to `false`.
@@ -283,7 +283,7 @@ There are 2 types of consents, modeled by the GeoUniq.ConsentItem enumeration:
 - GeoUniq.ConsentItem.ANALYSIS
 - GeoUniq.ConsentItem.CUSTOMIZATION_AND_ADTARGETING
 
-> This is an example that shown how to comunicate the current status of constents to GeoUniq SDK when app starts
+> This is an example that shown how to comunicate the current status of constents to Geo SDK when app starts
 
 ```java
 public class MainActivity extends Activity {

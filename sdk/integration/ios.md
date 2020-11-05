@@ -290,11 +290,11 @@ This is particularly useful in the following cases.
 
 If your app is not under GDPR regulation, then you can call this method with any one `ConsentItem` and the parameter `value` equal to `true` to let the SDK collect data without requesting any consent to the User
 
-If your app is under GDPR regulation but youn want to use your own dialog to request the consent to the User, then you have to explicitely inform GeoUniq SDK about the user choise.
+If your app is under GDPR regulation but youn want to use your own dialog to request the consent to the User, then you have to explicitely inform Geo SDK about the user choise.
 This must be done in two different situations:
 
 1. When the User takes a choise on your consent dialog: the user's choise must be comunicated to the SDK
-2. Each time the app starts: you should check the current status of the consent and communicate it to GeoUniq SDK each time. Note that this is important if your app already used to request the consent to collect data to the User before to integrate GeoUniq SDK. In such a case, if the User had already given the consent and you no longer ask it to the User, GeoUniq SDK would never be informed that the User had consented data to be collected. 
+2. Each time the app starts: you should check the current status of the consent and communicate it to Geo SDK each time. Note that this is important if your app already used to request the consent to collect data to the User before to integrate Geo SDK. In such a case, if the User had already given the consent and you no longer ask it to the User, Geo SDK would never be informed that the User had consented data to be collected. 
 
 Finally, you should provide the User a way to remove a consent from your app's settings.
 If the User removes a consent, then you should inform the SDK by calling the method above with the releated `ConsentItem` element and parameter `value` equal to `false`.

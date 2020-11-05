@@ -6,13 +6,13 @@ Data Model used to represent a [*Device*](/api/resources/platform-created/device
 
 Name        |Type      | Possible Values |  Description
 ------------|----------|----------------|-----------
-id | `String` | ANY valid [Device ID](/service-architecture.md) | The ID assigned to GeoUniq Analytics platform to the specific [Device](/service-architecture.md) 
+id | `String` | ANY valid [Device ID](/service-architecture.md) | The ID assigned to Cloud4Wi Geo Platform to the specific [Device](/service-architecture.md) 
 createdAt | [`Date`](/api/data-models/common/date.md) | ANY valid `Date` | The date and time when the *Device* has been registered
 os | `JSON` | N.A. | Info on the operating system of the device
 os.name | `String` | {`"android"`; `"ios"`} | The name of the operating system
 os.version | `String` | ANY | The version of the operating system
 clientApp | `JSON` | N.A. | Info on the [Client App](/service-architecture.md) which the *Device* belongs to
-clientApp.id | `String` | ANY valid Client App ID | The ID assigned by GeoUniq Analytics platform to the specific Client App
+clientApp.id | `String` | ANY valid Client App ID | The ID assigned by Cloud4Wi Geo Platform to the specific Client App
 clientApp.name | `String` | ANY | The package name (for Android) or the Bundle Id (for iOS), as provided for the Client App when it has been [configured for the Project](/service-architecture.md)
 customId | `String` | ANY | The Custom Id set for the *Device* if any. `null` otherwise.
 token | `String` | ANY | The Token set for the *Device* if any. `null` otherwise.
