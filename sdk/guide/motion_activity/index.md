@@ -1,6 +1,6 @@
 # Motion Activity
 
-Cloud4Wi Geo SDK provides the possibility to detect the motion activity of a User and to be notified when it changes.
+GeoUniq SDK provides the possibility to detect the motion activity of a User and to be notified when it changes.
 The motion activity represents the way the User is moving, e.g., whether he is still or walking, running, moving in a vehicle, etc.
 
 In details, the provided motion types are the following

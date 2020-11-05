@@ -12,7 +12,7 @@ This means that, for the functinality to work, it is necessary that:
 ## Enable the use motion activity sensors
 
 The use of the native iOS motion activity feature, which is based on HW sensors, requires to ask the related permission to the User.
-Until the permission is not granted, Cloud4Wi Geo SDK will infer the motion activity exclusively on the basis of the information coming from the tracking, thus with a lower accuracy.
+Until the permission is not granted, GeoUniq SDK will infer the motion activity exclusively on the basis of the information coming from the tracking, thus with a lower accuracy.
 The request of the permission will display a dialog to the User which can then decide to allow or deny the use of the functionality to the app. 
 
 > Starting from iOS 10, it is necessary to add the following key to the info.plist file in order to be able to use motion activity information comnig from sensors.

@@ -1,7 +1,7 @@
 # Overview
 
 
-This Section gives a quick overview of the main concepts behind Cloud4Wi Analytics API and its organization.
+This Section gives a quick overview of the main concepts behind Cloud4Wi Geo API and its organization.
 
 ## Resources
 
@@ -12,7 +12,7 @@ A *Device* represents a single installation of a Client App on a phisical device
 For a User of this API, a *Device* can be seen as the End User of the mobile app as the other Resources related to a *Device* generally represents the User behaviour.
 
 Starting from the *Device* Class, the **Device-related Resource Classes** are defined: they are Resource Classes whose members relate to one specific *Device*.
-We are particularly intrested in this category of Resources as they represent the real information provided by Cloud4Wi Analytics API:
+We are particularly intrested in this category of Resources as they represent the real information provided by Cloud4Wi Geo API:
 
 - ***Detected Position***: Represents a location update received for a *Device*. It provides the geographical location of the *Device* at a given time.
 - ***Activity***: Represents a period of time during which the *Device* moved the same way (e.g. walking, running, cycling, automotive, flying, etc.). It provides the indication of the time period as well as the path. It can also represent a period of time during which the *Device* was almost still.
@@ -92,7 +92,7 @@ These complex Conditions can be used to:
 
 ## Trigger Platform
 
-Cloud4Wi Analytics Trigger Platform allows to monitor even complex events and to perform one or more actions when they occur.
+Cloud4Wi Geo Trigger Platform allows to monitor even complex events and to perform one or more actions when they occur.
 
 The event to be monitored is defined through a *Trigger* Resource.
 The action(s) to be performed are indicated through an *Hook* Resource.

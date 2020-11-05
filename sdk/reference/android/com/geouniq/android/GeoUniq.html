@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">GeoUniq</span>
 extends java.lang.Object</pre>
-<div class="block">Basic class for using GeoUniq handler and accessing Cloud4Wi Geo SDK's API.<br>
+<div class="block">Basic class for using GeoUniq handler and accessing GeoUniq SDK's API.<br>
  This Class is implemented according to the Singleton design pattern.
  The singleton instance of this class can be obtained through <a href="../../../com/geouniq/android/GeoUniq.html#getInstance-android.content.Context-"><code>getInstance(Context)</code></a>.</div>
 </li>
@@ -183,7 +183,7 @@ extends java.lang.Object</pre>
 <tr class="altColor">
 <td class="colFirst"><code>static interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/geouniq/android/GeoUniq.IErrorListener.html" title="interface in com.geouniq.android">GeoUniq.IErrorListener</a></span></code>
-<div class="block">Provides a callback method to be notified of errors after calling some Cloud4Wi Geo SDK's API methods.<br></div>
+<div class="block">Provides a callback method to be notified of errors after calling some GeoUniq SDK's API methods.<br></div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -222,7 +222,7 @@ extends java.lang.Object</pre>
 <tr class="rowColor">
 <td class="colFirst"><code>static interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/geouniq/android/GeoUniq.ITrackingListener.html" title="interface in com.geouniq.android">GeoUniq.ITrackingListener</a></span></code>
-<div class="block">Defines methods to receive a callback when a new position update is detected and sent to Cloud4Wi platform.<br>
+<div class="block">Defines methods to receive a callback when a new position update is detected and sent to GeoUniq analytics platform.<br>
 
  Implementing this interface is necessary to call the methods
  <a href="../../../com/geouniq/android/GeoUniq.html#registerTrackingListener-java.lang.Class-"><code>registerTrackingListener(Class)</code></a> and
@@ -245,7 +245,7 @@ extends java.lang.Object</pre>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/geouniq/android/GeoUniq.RequestResult.html" title="enum in com.geouniq.android">GeoUniq.RequestResult</a></span></code>
-<div class="block">Defines possible errors that may occur when some specific methods of Cloud4Wi Geo SDK are called.<br>
+<div class="block">Defines possible errors that may occur when some specific methods of GeoUniq SDK are called.<br>
  Members of this enumeration are provided when
  the <code>IErrorListener#onError(RequestResult)</code> callback is called.</div>
 </td>
@@ -352,7 +352,7 @@ extends java.lang.Object</pre>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/geouniq/android/GeoUniq.html#getDeviceId--">getDeviceId</a></span>()</code>
-<div class="block">Allows to get the Device ID assigned by Cloud4Wicloud platform to this device.<br></div>
+<div class="block">Allows to get the Device ID assigned by GeoUniq Analytics cloud platform to this device.<br></div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -402,7 +402,7 @@ extends java.lang.Object</pre>
                   java.util.Date&nbsp;to,
                   boolean&nbsp;newestFirst,
                   <a href="../../../com/geouniq/android/GeoUniq.ILocationsReceiver.html" title="interface in com.geouniq.android">GeoUniq.ILocationsReceiver</a>&nbsp;locationsReceiver)</code>
-<div class="block">Returns all the positions stored on Cloud4Wi platform that were detected during a specified time interval
+<div class="block">Returns all the positions stored on GeoUniq Analytics platform that were detected during a specified time interval
  If no location is found in the specified interval, the last location before the interval start time is retrieved.<br>
 
  This method return immediately.</div>
@@ -549,7 +549,7 @@ extends java.lang.Object</pre>
 <tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/geouniq/android/GeoUniq.html#setCustomEndpoint-com.geouniq.android.GeoUniq.CustomEndpoint-">setCustomEndpoint</a></span>(<a href="../../../com/geouniq/android/GeoUniq.CustomEndpoint.html" title="class in com.geouniq.android">GeoUniq.CustomEndpoint</a>&nbsp;endpoint)</code>
-<div class="block">Set a <a href="../../../com/geouniq/android/GeoUniq.CustomEndpoint.html" title="class in com.geouniq.android"><code>GeoUniq.CustomEndpoint</code></a> that will receive all the location updates sent to Cloud4Wi platform.</br>
+<div class="block">Set a <a href="../../../com/geouniq/android/GeoUniq.CustomEndpoint.html" title="class in com.geouniq.android"><code>GeoUniq.CustomEndpoint</code></a> that will receive all the location updates sent to GeoUniq Analytics platform.</br>
 
  Use the <a href="../../../com/geouniq/android/GeoUniq.CustomEndpoint.Builder.html" title="class in com.geouniq.android"><code>GeoUniq.CustomEndpoint.Builder</code></a> to obtain a instance <code>CustomEndpoint</code>of object</div>
 </td>
@@ -557,7 +557,7 @@ extends java.lang.Object</pre>
 <tr id="i32" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/geouniq/android/GeoUniq.html#setCustomId-java.lang.String-">setCustomId</a></span>(java.lang.String&nbsp;customId)</code>
-<div class="block">Allows to set a custom ID to the device that will be shown when accessing Resources related to this device from Cloud4WiWeb API.<br>
+<div class="block">Allows to set a custom ID to the device that will be shown when accessing Resources related to this device from GeoUniq Analytics Web API.<br>
 
 The maximum allowed length is indicated in <a href="../../../com/geouniq/android/GeoUniq.html#MAX_CUSTOM_ID_LENGTH"><code>MAX_CUSTOM_ID_LENGTH</code></a></div>
 </td>
@@ -608,7 +608,7 @@ The maximum allowed length is indicated in <a href="../../../com/geouniq/android
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/geouniq/android/GeoUniq.html#setPushNotificationToken-java.lang.String-">setPushNotificationToken</a></span>(java.lang.String&nbsp;token)</code>
 <div class="block">Allows to set a token for push notifications that will be visible when accessing this device's resources from the WEB API.<br>
 
- Such token will be stored by Cloud4Wi Geo SDK and uploaded on Cloud4Wi platform.</div>
+ Such token will be stored by GeoUniq SDK and uploaded on GeoUniq Analytics platform.</div>
 </td>
 </tr>
 <tr id="i40" class="altColor">
@@ -892,7 +892,7 @@ public static&nbsp;<a href="../../../com/geouniq/android/GeoUniq.html" title="cl
 <li class="blockList">
 <h4>getDeviceId</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getDeviceId()</pre>
-<div class="block">Allows to get the Device ID assigned by Cloud4Wicloud platform to this device.<br></div>
+<div class="block">Allows to get the Device ID assigned by GeoUniq Analytics cloud platform to this device.<br></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the Device ID if available or <code>null</code> otherwise.</dd>
@@ -906,7 +906,7 @@ public static&nbsp;<a href="../../../com/geouniq/android/GeoUniq.html" title="cl
 <li class="blockList">
 <h4>setCustomId</h4>
 <pre>public&nbsp;boolean&nbsp;setCustomId(java.lang.String&nbsp;customId)</pre>
-<div class="block">Allows to set a custom ID to the device that will be shown when accessing Resources related to this device from Cloud4WiWeb API.<br>
+<div class="block">Allows to set a custom ID to the device that will be shown when accessing Resources related to this device from GeoUniq Analytics Web API.<br>
 
 The maximum allowed length is indicated in <a href="../../../com/geouniq/android/GeoUniq.html#MAX_CUSTOM_ID_LENGTH"><code>MAX_CUSTOM_ID_LENGTH</code></a></div>
 <dl>
@@ -1075,7 +1075,7 @@ public&nbsp;<a href="../../../com/geouniq/android/GeoUniq.GuLocation.html" title
                                java.util.Date&nbsp;to,
                                boolean&nbsp;newestFirst,
                                <a href="../../../com/geouniq/android/GeoUniq.ILocationsReceiver.html" title="interface in com.geouniq.android">GeoUniq.ILocationsReceiver</a>&nbsp;locationsReceiver)</pre>
-<div class="block">Returns all the positions stored on Cloud4Wi platform that were detected during a specified time interval
+<div class="block">Returns all the positions stored on GeoUniq Analytics platform that were detected during a specified time interval
  If no location is found in the specified interval, the last location before the interval start time is retrieved.<br>
 
  This method return immediately.
@@ -1320,7 +1320,7 @@ public&nbsp;java.lang.String&nbsp;getPushNotificationsToken()</pre>
 <pre>public&nbsp;void&nbsp;setPushNotificationToken(java.lang.String&nbsp;token)</pre>
 <div class="block">Allows to set a token for push notifications that will be visible when accessing this device's resources from the WEB API.<br>
 
- Such token will be stored by Cloud4Wi Geo SDK and uploaded on Cloud4Wi platform.
+ Such token will be stored by GeoUniq SDK and uploaded on GeoUniq Analytics platform.
  This token will be obtained when requesting any information that is related to this device through the WEB API
  or when receiving Alerts for a Trigger.<br>
 
@@ -1368,7 +1368,7 @@ public&nbsp;java.lang.String&nbsp;getPushNotificationsToken()</pre>
 <li class="blockList">
 <h4>setCustomEndpoint</h4>
 <pre>public&nbsp;void&nbsp;setCustomEndpoint(<a href="../../../com/geouniq/android/GeoUniq.CustomEndpoint.html" title="class in com.geouniq.android">GeoUniq.CustomEndpoint</a>&nbsp;endpoint)</pre>
-<div class="block">Set a <a href="../../../com/geouniq/android/GeoUniq.CustomEndpoint.html" title="class in com.geouniq.android"><code>GeoUniq.CustomEndpoint</code></a> that will receive all the location updates sent to Cloud4Wi platform.</br>
+<div class="block">Set a <a href="../../../com/geouniq/android/GeoUniq.CustomEndpoint.html" title="class in com.geouniq.android"><code>GeoUniq.CustomEndpoint</code></a> that will receive all the location updates sent to GeoUniq Analytics platform.</br>
 
  Use the <a href="../../../com/geouniq/android/GeoUniq.CustomEndpoint.Builder.html" title="class in com.geouniq.android"><code>GeoUniq.CustomEndpoint.Builder</code></a> to obtain a instance <code>CustomEndpoint</code>of object</div>
 <dl>

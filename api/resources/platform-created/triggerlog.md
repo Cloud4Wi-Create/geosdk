@@ -1,7 +1,7 @@
 # Triggerlog
 
 A *Triggerlog* models a single occurrence of an event defined by a [*Trigger*](/api/resources/user-created/trigger.md).
-*Triggerlog* Resources are automatically created by Cloud4Wi platform each time the event defined by a specific *Trigger* is detected.
+*Triggerlog* Resources are automatically created by GeoUniq analytics platform each time the event defined by a specific *Trigger* is detected.
 
 ## Dimensions
 

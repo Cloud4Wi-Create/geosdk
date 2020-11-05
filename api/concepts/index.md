@@ -1,6 +1,6 @@
 # Basic Concepts
 
-This section describes the basic concepts under Cloud4Wi' API.
+This section describes the basic concepts under GeoUniq Analytics' API.
 
 * [Resources, Dimensions, and Geometries](/api/concepts/resource-definition.md)
 * [Selection of Resources](/api/concepts/resource-selection.md)

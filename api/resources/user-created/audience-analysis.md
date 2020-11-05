@@ -11,7 +11,7 @@ The analysis is started asincrounsly and the results will be provided through fi
 
 An *Audience Analysis* Resource is mainly chracterized by:
 
-* **Resource ID and creation time**. Assigned by the Cloud4Wi platform.
+* **Resource ID and creation time**. Assigned by the GeoUniq Analytics Platform.
 * **Name, Description, and Labels.** Descriptive Information provided when the Resource is created.
 * **Type**. Indication of the type of analysis that is desired.
 

@@ -1,6 +1,6 @@
-# Getting started with Cloud4Wi Geo SDK integration
+# Getting started with Geouniq integration
 
-To get started with Geo SDK, follow the steps below
+To get started with GeoUniq, follow the steps below
 
 1. Create and configure a Project, as described [here](/project-configuration.md)
 2. Integrate the SDK into your mobile app, as described [here](/sdk/integration/index.md)

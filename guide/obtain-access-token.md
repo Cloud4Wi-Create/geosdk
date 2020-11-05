@@ -1,6 +1,6 @@
 # Obtain an access token
 
-Before to perform any request to Cloud4Wi Web API, an access token has to be obtained.
+Before to perform any request to GeoUniq Web API, an access token has to be obtained.
 You can do this by performing the request below, where you have to use your API Key for the `<YOUR_API_KEY>` placeholder.
 
 ```shell
