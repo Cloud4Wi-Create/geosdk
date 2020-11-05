@@ -1,9 +1,9 @@
-# Service Architecture
+# Cloud4Wi Geo Service Overview
 
 Cloud4Wi Geo Service (referred as "GeoUniq") is provided through:
 
-* **Tracking Engine**, implemented through the Geo SDK that must be integrated into mobile apps. The Tracking Engine performs always-on location tracking of the mobile device and sends updates to the Cloud4Wi platform.
-* **Cloud4Wi platform**, which provides even complex geolocation analytics through a Web API.
+* **Geo SDK**, that must be integrated into mobile apps, which performs always-on location tracking of the mobile device and sends updates to the Cloud4Wi platform.
+* **Cloud4Wi platform**, which provides sophisticated geolocation tracking and analytics.
 
 ## Projects and Client Apps
 
