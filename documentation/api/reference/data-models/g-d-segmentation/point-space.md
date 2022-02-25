@@ -1,0 +1,14 @@
+# Point-Space-Segmentation
+
+Name        |Type      
+------------|----------
+inside | [`Space-Segmentation`](/api/reference/data-modelsata-models/d-segmentation/space.md) | Indicates that a Segmentation has to be performed with respect to the [*inside* Selection Condition] on the *Space* Dimension.
+
+```json
+{
+    "inside" : {
+        "geohash": 5
+    }
+}
+```
+
