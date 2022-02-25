@@ -1,15 +1,11 @@
-* [Documentation Home](README.md)
-
-# SDK
+# SDK Documentation
 
 ## Usage
-
 * [Import the SDK into a mobile app](/sdk/integration/index.md)
-* [Advanced features](/sdk/guide/index.md)
 
 ## Change Logs
-* [Android](/sdk/integration/changelog_android.md)
-* [iOS](/sdk/integration/changeLogIos.md)
+* [Android](/sdk/changelog_android.md)
+* [iOS](/sdk/changelog_Ios.md)
 
 ## Main metrics
 

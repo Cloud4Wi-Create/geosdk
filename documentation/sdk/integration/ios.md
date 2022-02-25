@@ -1,29 +1,26 @@
 > last update: 23-Jan-2020
 
 # SDK Integration
- 
 
-## Table of Contents
 
 1. [Reference versions](#reference-versions)
     1. [Xcode](#xcode)
-    2. [Swift](#swift)
-    3. [GeoUniq](#geouniq)
-2. [Installation](#installation)
+    1. [Swift](#swift)
+    1. [GeoUniq](#geouniq)
+1. [Installation](#installation)
     1. [CocoaPods](#cocoapods)
-    2. [Swift Package Manager](#swift-package-manager)
-    3. [Manual](#manual)
-3. [Project settings](#project-settings)
+    1. [Swift Package Manager](#swift-package-manager)
+1. [Project settings](#project-settings)
     1. [Mobile key](#mobile-key)
-    2. [Location usage keys](#location-usage-keys)
-    3. [Universal framework](#universal-framework)
-    4. [Background fetch](#background-fetch)
-    5. [App Tracking Transparency](#app-tracking-transparency)
-4. [Basic operations](#basic-operations)
+    1. [Location usage keys](#location-usage-keys)
+    1. [Background fetch](#background-fetch)
+    1. [App Tracking Transparency](#app-tracking-transparency)
+1. [Basic operations](#basic-operations)
     1. [Initialization](#initialization)
-    2. [Enable/Disable SDK](#enabledisable-the-sdk)
-    3. [Handle user consent](#handle-user-consent)
-    4. [Get Device Id](#get-device-id)
+    1. [Enabling the SDK](#enabling-the-sdk)
+1. [Optional Operations](#optional-operations)  
+    1. [Handling user consent to collect data](#handling-user-consent-to-collect-data)
+    1. [Get the Device Id](#get-device-id)
 
 ## Reference Versions
 
@@ -38,8 +35,7 @@ Framework with swift 4 version has been deprecated.
 
 ### GeoUniq
 
-1.6.5 - [Changelog](/sdk/integration/changeLogIos.md)
-
+1.6.5
 
 ## Installation
 
@@ -51,15 +47,6 @@ Add `pod 'GeoUniq-Swift5'` to your Podfile and run `pod install`. More details [
 
 Repository: https://github.com/geouniq/GeoUniq-Swift-Package.git
 
-### Manual
-
-1. Download the SDK from the [Console](https://console.geouniq.com) (drop down menu on the top-right corner)
-2. Drag and Drop the file GeoUniq.xcframework into your xcode project in the Project Navigator (remember to check *"Copy items if needed"*).
-3. Select Your-Project-Name general file in the Project Navigator:
-    - Select Your-Target-Name
-    - General tab -> Embedded Binaries section: add GeoUniq.xcframework (set 'Embed & Sign')
-
-
 ## Project settings
 
 ### Mobile key
@@ -68,7 +55,6 @@ Add the following key to Info.plist file (String value) with the corresponding v
 ```
 GUMobileKey: 'your-mobile-key'
 ```
-
 
 ### Location usage keys
 
@@ -89,17 +75,6 @@ NSLocationAlwaysUsageDescription: "We would like to access your locations"
 ```
 GULocationPermissionNotDetermined: "We would like to ask your permission to access your locations"
 ```
-
-### Universal framework
-
-<b>From version 1.6.1 with the transion to XCFramework this step is not necessary!</b>
-
-<s>In order to give you the best development experience we provide an 'Universal Framework': a framework which works both on simulator and real device.
-
-<s>What you have to do is just add one line of code as described below:
-1. <s>Select Your-Target-Name
-2. <s>Build Phases tab -> add new Run Script phase after Embed Frameworks phase
-3. <s>Paste `./GeoUniq.framework/run` in the script text box (Cocoapods insallation paste:  `${PODS_ROOT}/GeoUniq.framework/run`) </s>
 
 ### Background fetch
 
@@ -202,8 +177,9 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 }
 ```
 
-### Enable/Disable the SDK
-To start the tracking engine call enable method. You can do that into the didFinishLaunchingWithOptions method. It is possible to enable directly the tracking engine when the initialize method is called. Once enabled, the SDK will not stop until you disable it by calling GeoUniq.sharedInstance().disable()
+### Enabling the SDK
+he SDK can be enabled and disabled at runtime.
+To make GeoUniq SDK start, you need to enable it by calling the enable method. You can do that into the didFinishLaunchingWithOptions method. It is possible to enable directly the SDK when the initialize method is called. Once enabled, the SDK will not stop until you disable it by calling GeoUniq.sharedInstance().disable()
 If the application does not have the permissions or has not yet requested them, the enable method will request them. 
 
 
@@ -237,7 +213,9 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 }
 ```
 
-### Handle User consent
+## Optional Operations
+
+### Handling User consent to collect data
 
 The ability of the SDK to track the device location does not give Geouniq the permission to collect user data.
 According to [GDPR](https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en) regulation, you should request the User the consent to collect location data on Geouniq platform.

@@ -1,20 +1,15 @@
 # SDK Integration
 
-## Changelog
-> You can find a complete changelog [here](https://gitlab.com/geouniq/documentation/blob/master/sdk/integration/changelog_android.md)
-
-## Table of Contents
-
 1. [Project Configuration](#project-configuration)
     1. [Gradle](#gradle-configuration)
-    2. [Manifest](#manifest-configuration)
-    3. [ProGuard](#proguard-configuration)
-    4. [Mobile Key](#providing-the-mobile-key)
-2. [Basic Operations](#basic-operations)
-    1. [Enabling/Disabling the SDK](#enablingdisabling-the-sdk)
-    2. [Handling blocking issues](#handling-blocking-issues)
-    3. [Handling User consent](#handling-user-consent)
-    4. [Getting the device ID](#getting-the-device-id)
+    1. [Manifest](#manifest-configuration)
+    1. [ProGuard](#proguard-configuration)
+    1. [Mobile Key](#providing-the-mobile-key)
+1. [Enabling the SDK](#enabling-the-sdk)
+1. [Optional Operations](#optional-operations)
+    1. [Handling blocking issues](#handling-blocking-issues)
+    1. [Handling User consent to collect data](#handling-user-consent-to-collect-data)
+    1. [Getting the device ID](#getting-the-device-id)
 
 ## Project Configuration
 
@@ -53,7 +48,7 @@ The library already contains its ProGuard configuration file, which will be merg
 
 ### Providing the Mobile Key
 
-The Mobile Key generated for your app when you configured your project (see [here](/project-configuration.md)) must be provided as a string resource with name `"geouniq_mobile_key"`.
+The Mobile Key generated for your app must be provided as a string resource with name `"geouniq_mobile_key"`.
 
 This can be done by putting the following line into the Gradle build script of your app (*build.gradle* file of your app module)
 
@@ -64,12 +59,7 @@ defaultConfig {
 }
 ```
 
-It could be convenient to set a different value for the debug and the relase build types.
-
-> Note that the certificates used for the two build types are generally different, and thus their SHA1 fingerprint will be different. 
-For this reason, you should create two different Clietn Apps, one for the debug and one for the release build, each with its own fingerprint (see [Project Configuration](/project-configuration.md)).
-A common solution is to create two different projects, one for test and one for production, and create an Android Client App on each project, using the debug fingerprint for the test project and the release fingerprint for the production project.
-
+It could be convenient to set a different value for the debug and the relase build types, as they will genmerally have two different Mobile Keys.
 
 ```gradle
 buildTypes {
@@ -84,25 +74,12 @@ buildTypes {
 }
 ```
 
-## Basic operations
-
-* [Enabling/Disabling the SDK](#enablingdisabling-the-sdk)
-* [Handling blocking issues](#handling-blocking-issues)
-* [Handling User consent](#handling-user-consent)
-* [Getting the device ID](#getting-the-device-id)
-
-### Enabling/Disabling the SDK
+## Enabling the SDK
 
 The SDK can be enabled and disabled at runtime.
 To make GeoUniq SDK start, you need to enable it by calling the method `GeoUniq.enable()` at least once.
 
 You might do that into the main activity of your app, as in the example below.
-
-Once enabled, the SDK will not stop until you disable it by calling `GeoUniq.disable()`. That is, it will keep performing automatic operations, such as tracking the device position, even after a device reboot or an update of the app.
-Disabling the SDK at runtime is useful if you want the SDK to stop completely. For example, you could remotely control a configuration parameter of your app to stop the SDK for all or some of your installations.
-
-> If you simply don't want Geouniq to keep collecting location data for a specific User, you can do that without completely disabling the SDK (see [Handle User consent](#handle-user-consent)). This way you can still exploit the mobile-side functionalities that the SDK provides without having Geouniq collecting data for the specific user
-
 
 ```java
 public class MainActivity extends Activity {
@@ -118,14 +95,22 @@ public class MainActivity extends Activity {
 }
 ```
 
-### Handling blocking issues
+Once enabled, the SDK will not stop until you disable it by calling `GeoUniq.disable()`.
 
-For the SDK to be able to accomplish its main task, that is tracking the device position, the following requirements must be met:
+## Requirements for tracking
+
+For the SDK to be able to track the device position, the following requirements must be met:
 
 * The foreground location permission must be granted to the app
 * The background location permission must be granted to the app, if it meets the Google Play Store policies for background location
 * The location functionality must be enabled on the device
 * Google Play Services must be installed on the device (almost always met)
+
+You can handle these issues directly in your app or exploits the utilities provided by the SDK, as described in [Handling blocking issues](#handling-blocking-issues)
+
+## Optional operations
+
+### Handling blocking issues
 
 The SDK provides a simple way for checking all the requirements and optionally solve the related issues.
 Solving an issue generally implies showing an alert to the User. Depending on the specific requirement, a different alert will be shown.
@@ -171,7 +156,7 @@ public class MainActivity extends Activity {
 
 ```
 
-### Handling User consent
+### Handling User consent to collect data
 
 The ability of the SDK to track the device location does not give Geouniq the permission to collect user data.
 According to [GDPR](https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en) regulation, you should request the User the consent to collect location data to Geouniq platform.
@@ -334,11 +319,6 @@ public class MainActivity extends Activity {
 The method `IConsentsMap getPrivacyConsentsMap()` of `GeoUniq` class allows to know the status of the User consents.
 This is the result of the User choise after showing it the privacy policy dialog, or the value explicitely set through the `setPrivacyConsent(ConsentItem consentItem, boolean isGranted)` method.
 To check a single consent, there is the method `boolean getPrivacyConsent(ConsentItem)` that return `true`if the consent is granted, `false` otherwise
-
-#### Configurations
-
-There are two configurations for Privacy popup, Default and Media, you can also customize it as you prefer. 
-[Here](https://gitlab.com/geouniq/documentation/blob/master/sdk/integration/privacy_popup_customization_android.md) you can find a guide.
 
 ## Getting the Device ID
 
